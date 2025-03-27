@@ -27,6 +27,6 @@ OR
 2. Create and discuss an accessibile code pattern
 
 ### Exercises to Choose from for Web Solutions:
-1. Build a component from a NYS website with entirely your own code
+1. Build a few components from a NYS website with entirely your own code
 OR
 2. Choose your own adventure code demo of your choice
