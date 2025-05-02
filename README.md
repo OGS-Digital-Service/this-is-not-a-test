@@ -18,15 +18,7 @@ Thank you for applying to work for the New York State Digital Service! This is t
 - Example contents: accessibility_audit/candidate-name/(things you did here!)
 - For simple text, please use markdown or html, try not to submit pdfs or word documents unless absolutely necessary
 
-## Exercises
-Each candidate track has two choices, with additional instructions in the folder provided in this repo.
-
-### Exercises to Choose from for Accessibility Solutions (Choose 1):
+### Exercises to Choose from for Accessibility Solutions (BOTH):
 1. Accessibility audit of the homepage of any New York State website, using WCAG 2.2 AA as your guideline.
-OR
 2. Create and discuss an accessible code pattern
 
-### Exercises to Choose from for Web Solutions (Choose 1):
-1. Build a few components from a NYS website with entirely your own code
-OR
-2. Choose your own adventure code demo of your choice
