@@ -1,0 +1,452 @@
+<!doctype HTML>
+<html lang="en">
+   <head>
+      <title>Accessibility Audit of OASAS Homepage</title>
+      <meta charset="utf-8">
+      <style>
+         html {
+            font-family: Helvetica, Arial, sans-serif;
+         }
+         table {
+            border-collapse: collapse;
+            width: 100%;
+         }
+         table, td, th {
+            border: 1px solid #3b3b3b;
+            vertical-align: text-top;
+         }
+         th {
+            padding: 1em 0;
+            background: #D5D0DC;
+         }
+         caption {
+            text-align: left;
+         }
+         pre {
+            background-color: #f4f4f4;
+            white-space: pre-wrap;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 0 3%;
+         }
+         p {
+            padding: 0 3%;
+            line-height: 1.2em;
+         }
+         a {
+            color: #056161;
+         }
+         dt {
+            margin-top: .5em;
+         }
+      
+      </style>
+   </head>
+   <body>
+      <main>
+         <h1>Office of Addiction Services and Supports Homepage Accessibility Audit</h1>
+         <h2>About This Audit</h2>
+         <dl>
+            <dt>Website: </dt>
+            <dd>
+               <a href="https://oasas.ny.gov/" target="_blank">Office of Addiction Services and Supports</a>
+            </dd>
+            <dt>Tester/Author: </dt>
+            <dd>Essence Shirley</dd>
+            <dt>Devices & OS: </dt>
+            <dd>MacBook Pro (2020), macOS v11.1</dd>
+            <dt>Screen Readers: </dt>
+            <dd>VoiceOver</dd>
+         </dl>
+         <h2>Audit Results</h2>
+
+         <table>
+            
+            <tr>
+               <!-- <th scope="col">Severity</th> -->
+               <th scope="col" style="min-width: 300px;">Issue & User Experience</th>
+               <!-- <th scope="col">Screenshot?</th> -->
+               <th scope="col">Reference Code</th>
+               <!-- <th scope="col">Screenshot?</th> -->
+               <th scope="col" style="min-width: 300px;">Recommended Solution(s)</th>
+               <th scope="col">Conformant Code Example</th>
+               <th scope="col">Guideline(s)</th>
+            </tr>
+            <tr>
+              <!--  <td>Low</td> -->
+               <td>
+                  <p>
+                     The NYS homepage image link has an accessible name of "Visit the NY.gov homepage", which excludes the visual "New York State" label text.
+                  </p>
+                  <p>
+                     Speech input users navigate/operate interactive components by speaking the visual labels. Including visual label text in the programmatic label also aids sighted screen reader users in navigating the content and operating the component.
+                  </p>
+               </td>
+               
+               <td>
+                  <pre>
+                     <code>
+&lt;a href="https://ny.gov" title="Visit the NY.gov homepage" id="nys_logo_header_svg"&gt;
+   &lt;svg class="nys-logo" xmlns="..." xmlns:xlink="..." version="1.1" role="img" id="Layer_1" x="0px" y="0px" viewBox="..." xml:space="..." height="55" width="85" aria-labelledby="nys_logo_header_svg" title="Visit the NY.gov homepage"&gt;
+         ...
+   &lt;/svg&gt;
+&lt;/a
+                     </code>
+                  </pre>
+                  
+               </td>
+               <td>
+                  <p>When a control has visual label text, ensure the visible label text is included in the control’s programmatic label. While not required, it is advised to include the visual label at the beginning of the accessible name, (e.g., “New York State NY.gov Homepage”).
+                  </p>
+                  <p>Additionally, ensure labels, including accessible names for image links are both informative and concise. In this scenario, it is recommended to remove the redundant “Visit the” text from the link’s accessible name, as this information is already provided by the native link role.
+                  </p>
+               </td>
+               <td>
+                  <pre>
+                     <code>
+
+&lt;a href="https://ny.gov" id="nys_logo_header_svg"&gt;
+   &lt;svg class="nys-logo" xmlns="..." xmlns:xlink="..." version="1.1" role="img" id="Layer_1" x="0px" y="0px" viewBox="..." xml:space="..." height="55" width="85" aria-label="New York State NY.gov Homepage">
+      ...
+   &lt;/svg&gt;
+&lt;/a&gt;
+               </td>
+               <td>2.5.3 Label in Name,<br>1.1.1 Non-Text Content, <br>2.4.6 Headings and Labels</td>
+            </tr>
+
+            <tr>
+               <!-- <td>Medium</td> -->
+               <td>
+                  <p>
+                     The header navigation dropdown menus appear on hover/focus but cannot be closed via keyboard (e.g., pressing the ESC key).
+                  </p>
+                  <p>Screen magnification users that utilize the mouse pointer to magnify a specific part of the screen will be unable to dismiss content that appears on hover/focus without moving the mouse pointer (e.g., pressing the ESC key). Keyboard users are also unable to dismiss/close the content that appears on focus, which impedes navigation. (Keyboard users are required to tab/navigate through each revealed submenu list in order to access the next top-level navigation item).
+                  </p>
+               </td>
+               <td>
+                  <pre>
+                     <code>
+&lt;ul class="gnav-ul"&gt;
+   ...
+   &lt;li class="gnav-mitems gnav-topli webny-global-active" aria-expanded="true"&gt;
+      &lt;a href="#">Prevention&lt;/a&gt;
+      &lt;ul class="gnav-items-ul" aria-hidden="false"&gt;
+         ...
+      &lt;/ul&gt;
+   &lt;/li&gt;
+   ...
+&lt;/ul&gt;
+                        
+                     </code>
+                  </pre>
+               </td>
+               <td>
+                  <p>
+                     When additional content appears on hover, ensure the content can be closed/dismissed without moving the mouse pointer. This is ideally achieved by enabling the ESC key to close the additional content (e.g., adding an event listener for the ESC key). <br>Additionally, ensure focus returns to the control that triggered the additional content when dismissed/closed. In this scenario, focus should return to the parenting, top-level link that contains/triggered the submenu.
+                  </p>
+               </td>
+               <td>
+                  <pre>
+                     <code>
+HTML
+&lt;ul class="gnav-ul"&gt;
+   ...
+   &lt;li class="gnav-mitems gnav-topli webny-global-active" aria-expanded="true"&gt;
+      &lt;a href="#" id="prevention-parent">Prevention&lt;/a&gt;
+      &lt;ul class="gnav-items-ul" id="prevention-dropdown" aria-hidden="false"&gt;
+         ...
+      &lt;/ul&gt;
+   &lt;/li&gt;
+   ...
+&lt;/ul&gt;
+
+Javascript
+// Adding an event listener for when the ESC is pressed
+document.addEventListener("keydown", (e) => {
+   if ((e.keyCode || e.which) === 27)
+
+   //Hiding the Prevention dropdown
+   document.getElementById("prevention-dropdown").style.display = "none";
+
+   //Returning focus to Prevention
+   $('#prevention-parent').focus;
+});
+                     </code>
+                  </pre>
+               </td>
+               <td>1.4.13 Content on Hover or Focus, <br>2.1.1 Keyboard</td>
+            </tr>
+
+            <tr>
+              <!--  <td>Low</td> -->
+               <td>
+                  <p>
+                     The secondary navigation (NAV element) has an accessible name of "Secondary Navigation Menu", which includes redundant navigation role information.
+                  </p>
+                  <p>Clear, concise accessible names make it easier for screen reader users to quickly determine the component’s purpose. Since the role is announced by screen readers (after the accessible name), this information is repeated twice (e.g., “Secondary Navigation Menu, navigation”).
+                  </p>
+               </td>
+               
+               <td>
+                  <pre>
+                     <code>
+&lt;nav role="navigation" aria-label="Secondary Navigation Menu" id="secondary-navigation"&gt;
+   ...
+&lt;/nav&gt;
+                     </code>
+                  </pre>
+               </td>
+               <td>
+                  <p>
+                     Avoid including redundant role information in accessible names. In this scenario, the navigation role information is natively provided by the NAV element and should be removed (e.g., “Secondary Menu”).
+                     
+                  </p>
+               </td>
+               <td>
+                  <pre>
+                     <code>
+&lt;nav role="navigation" aria-label="Secondary Menu" id="secondary-navigation"&gt;
+   ...
+&lt;/nav&gt;
+                     </code>
+                  </pre>
+               </td>
+               <td>2.4.6 Headings and Labels</td>
+            </tr>
+
+            <tr>
+              <!--  <td>Medium</td> -->
+               <td>
+                  <p>The navigation links that contain submenus are not properly indicated; the aria-expanded attributes are inappropriately set on the LI elements instead of the A elements.</p>
+                  <p>Navigation links that have submenus are conveyed to assistive technology users via the aria-expanded attribute. Since the aria-expanded attribute is not set on the link elements, the expanded/collapsed state information is not announced by screen readers.</p>
+                  
+               </td>
+               
+               <td>
+                  <pre>
+                     <code>
+&lt;ul class="gnav-ul"&gt;
+   &lt;li class="gnav-mitems gnav-topli solotop" aria-expanded="false"&gt;
+      &lt;a href="/about" title="...">About&lt;/a&gt;
+   &lt;/li&gt;
+   &lt;li class="gnav-mitems gnav-topli" aria-expanded="false"&gt;
+        &lt;a href="#">Prevention&lt;/a&gt;
+        &lt;ul class="gnav-items-ul" aria-hidden="true" style=""&gt;
+            ...
+           
+        &lt;/ul&gt;
+   &lt;/li&gt;
+   ...
+&lt;/ul&gt;
+                     </code>
+                  </pre>         
+               </td>
+               <td>
+                  <p>Ensure links that contain submenus are indicated by setting the aria-expanded attribute on those A elements. In this case, ensure the aria-expanded attributes are removed from LI elements and set on the A elements instead.</p>
+               </td>
+               <td>
+                  <pre>
+                     <code>
+&lt;ul class="gnav-ul"&gt;
+   &lt;li class="gnav-mitems gnav-topli solotop"&gt;
+      &lt;a href="/about" title="...">About&lt;/a&gt;
+   &lt;/li&gt;
+   &lt;li class="gnav-mitems gnav-topli" &gt;
+        &lt;a href="#" aria-expanded="false">Prevention&lt;/a&gt;
+        &lt;ul class="gnav-items-ul" aria-hidden="true" style=""&gt;
+            ...
+           
+        &lt;/ul&gt;
+   &lt;/li&gt;
+   ...
+&lt;/ul&gt;
+                     </code>
+                  </pre>
+               </td>
+               <td>4.1.2 Name, Role, Value <br> 1.3.1 Info and Relationships</td>
+            </tr>
+            <tr>
+               <!-- <td>xx</td> -->
+               <td>
+                  <p>There are section headings following the "Office of Addication Services and Supports" H1 that are inappropriately marked as H1 elements, which does not accurately reflect their hierarchy on the page. Examples include:</p>
+                  <ul>
+                     <li>"Gambling Too Much? Take a Pause." H1</li>
+                     <li>"Upcoming Events" H1</li>
+                     <li>"Opiod Settlement Fund Tracker" H1</li>
+                  </ul>
+                  <p>
+                     Heading levels convey the structure/hierarchy of page content. In this case, screen reader users may inaccurately perceive the “Gambling Too Much?” H1 as the top-level heading for the main content, and the H2’s as subsections pertaining to this topic. While sighted users can determine that the card titles are subheadings in the "Featured" section, screen reader users will be unable to understand this structure.
+                  </p>
+               </td>
+               <td>
+                  <pre>
+                     <code>
+&lt;h1&gt;
+   &lt;a href="/"&gt;
+   Office of Addiction Services and Supports&lt;br&gt;
+   &lt;/a&gt;
+&lt;/h1&gt;
+ ...
+ &lt;h1&gt;Gambling Too Much? Take a Pause.  &lt;/h1&gt;
+                     </code>
+                  </pre>         
+               </td>
+               <td>
+                  <p>Ensure heading levels reflect the hierarchy of information on the page. Since the "Office of Addication Services and Support" H1 is the umbrella (top-level) topic that describes the entire homepage, it is recommended to mark the section headings that follow as H2 elements, and subheadings as H3 elements, etc.</p>
+               </td>
+               <td>
+                  <pre>
+                     <code>
+&lt;h1&gt;
+   &lt;a href="/"&gt;
+   Office of Addiction Services and Supports&lt;br&gt;
+   &lt;/a&gt;
+&lt;/h1&gt;
+ ...
+ &lt;h2&gt;Gambling Too Much? Take a Pause.  &lt;/h2&gt;
+ ...
+&lt;h2&gt;Featured &lt;/h2&gt;
+&lt;h3&gt;Upcoming Events &lt;/h3&gt;
+
+
+                     </code>
+                  </pre>
+               </td>
+               <td>1.3.1 Info and Relationships</td>
+            </tr>
+            <tr>
+               <!-- <td>xx</td> -->
+               <td>
+                  <p>There is content that functions as a heading but is not marked as such. Examples include:</p>
+                  <ul>
+                     <li>"Planning for the Future - Strategic Plan"</li>
+                     <li>"Listen Now - Addiction: The Next Step"</li>
+                  </ul>
+                  <p>Without heading markup, assistive technology users will be unable to determine that a heading is present (and unable to utilize the implicit heading). Assistive technology users also navigate via headings (e.g., jumping from section-to-section.</p>
+                  
+               </td>
+               
+               <td>
+                  <pre>
+                     <code>
+&lt;div class="get-involved--field-webny-get-involved-title"&gt;Planning for the Future&lt;/div&gt;
+&lt;div class="get-involved--field-webny-get-inv-headline"&gt;Strategic Plan &lt;/div&gt;
+...
+&lt;div class="..."&gt;Listen Now&lt;/div&gt;
+&lt;div class="..."&gt;Addiction: The Next Step&lt;/div&gt;
+                     </code>
+                  </pre>         
+               </td>
+               <td>
+                  <p>
+                     Ensure content that functions as a heading is marked as a heading, ideally using a native HTML heading element.
+                  </p>
+               </td>
+               <td>
+                  <pre>
+                     <code>
+&lt;h2&gt;                   
+   &lt;span class="..."&gt;Planning for the Future&lt;/span&gt;
+   &lt;span class="sr-only"&gt;, &lt;/span&gt;
+   &lt;span class="...">Strategic Plan &lt;/span&gt;
+&lt;/h2&gt; 
+...
+&lt;h2&gt; 
+   &lt;span class="...">Listen Now&lt;/span&gt;
+   &lt;span class="sr-only"&gt;, &lt;/span&gt;
+   &lt;span class="...">Addiction: The Next Step&lt;/span&gt;
+&lt;/h2&gt; 
+                     </code>
+                  </pre>
+               </td>
+               <td>1.3.1 Info and Relationships</td>
+            </tr>
+            <tr>
+               <!-- <td>Advisory</td> -->
+               <td>
+                  <p>There are cards that contain concurrent identical links; the thumbnail image link and the hyperlinked heading text in each card are both links to the same destination.
+
+                  </p>
+                  <p>Tabbing through redundant links impedes keyboard users' ability to quickly/easily navigate the content. Screen reader users may also be confused/disoriented by successive identical links.</p>
+                  
+               </td>
+              
+               <td>
+                  <pre>
+                     <code>
+               
+&lt;article class="webny-card"&gt;
+   &lt;div data-history-node-id="..." about="..." class="..."&gt;
+      &lt;a href="/opioid-settlement-funding-initiatives" aria-label="Opioid Settlement Funding Initiatives"&gt;
+         ...
+      &lt;/a&gt;
+      &lt;div class="card-content"&gt;
+         &lt;div class="card-content-top"&gt;
+            &lt;h1&gt;
+               &lt;a href="/opioid-settlement-funding-initiatives" rel="bookmark"&gt;
+               Opioid Settlement Funding Initiatives
+               &lt;/a&gt;
+            &lt;/h1&gt;
+         &lt;/div&gt;
+      &lt;/div&gt;
+      ...
+   &lt;/div&gt;
+&lt;/article&gt;
+                     </code>
+                  </pre>        
+               </td>
+               <td>
+                  <p>
+                     In this scenario, in which both links serve the same purpose, authors/developers should consider wrapping the thumbnail image and the heading text within a single link element.
+                  </p>
+                  
+               </td>
+               <td>
+                  <pre>
+                     <code>
+&lt;article class="webny-card"&gt;
+   &lt;div data-history-node-id="..." about="..." class="..."&gt;
+      &lt;div class="card-content"&gt;
+         &lt;div class="card-content-top"&gt;
+            &lt;h1&gt;
+               &lt;a href="/opioid-settlement-funding-initiatives" rel="bookmark"&gt;
+               Opioid Settlement Funding Initiatives
+                   &lt;div class="card-image"&gt; &lt;/div&gt;
+               &lt;/a&gt;
+            &lt;/h1&gt;
+         &lt;/div&gt;
+      &lt;/div&gt;
+      ...
+   &lt;/div&gt;
+&lt;/article&gt;
+                     </code>
+                  </pre>
+              
+               </td>
+               <td>1.1.1 Non-text Content <br>2.4.4: Link Purpose (In Context)</td>
+            </tr>
+
+           <!--  <tr>
+               <td>xx</td>
+               <td>
+                  issue
+                  
+               </td>
+               <td>Dept</td>
+               <td>
+                  <pre>
+                     <code>
+                     </code>
+                  </pre>         
+               </td>
+               <td>X</td>
+               <td>
+                compliant code
+               </td>
+               <td>4.1.2 Name, Role, Value</td>
+            </tr> -->
+
+         </table>
+        
+      </main>
+   </body>
+</html>

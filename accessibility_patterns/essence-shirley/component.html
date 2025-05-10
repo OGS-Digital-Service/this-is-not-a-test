@@ -1,0 +1,83 @@
+<!doctype HTML>
+<html lang="en">
+   <head>
+      <title>Accessibility Pattern</title>
+      <meta charset="utf-8">
+      <style>
+         html {
+            font-family: Helvetica, Arial, sans-serif;
+         }
+         label {
+            display: block;
+         }
+         #disclaimer {
+            display: none;
+            font-weight: bold;
+            font-size: 0.9em;
+            color: #056161;
+         }
+         fieldset {
+            border-color: #D5D0DC;
+         }
+         legend {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+         }
+         input[type="radio"] {
+            vertical-align: text-top;
+            margin-bottom: 10px;
+         }
+      
+      </style>
+   </head>
+   <body>
+      <main>
+         <h1>Radio Button with Disclosure of Additional Info Demo</h1>
+         <p>Select "Staten Island" to reveal the associated disclaimer information.</p>
+         <form>
+            <fieldset>
+            <legend>Which borough is the best?</legend>
+            <label for="bk">
+               <input type="radio" name="borough" id="bk">
+               Brooklyn
+            </label>
+            <label for="qns">
+               <input type="radio" name="borough" id="qns">
+               Queens
+            </label>
+            <label for="mnhtn">
+               <input type="radio" name="borough" id="mnhtn">
+               Manhattan
+            </label>
+            <label for="bx">
+               <input type="radio" name="borough" id="bx">
+               The Bronx
+            </label>
+            <label for="sI">
+               <input type="radio" name="borough" id="staten" aria-describedby="disclaimer">
+               Staten Island
+            </label>
+            <p id="disclaimer">Note: We listen and we don't judge.</p>
+         </fieldset>
+         <!-- additional form controls -->
+            
+         </form>
+
+        
+      </main>
+      <script type="text/javascript">
+         const disclosure = document.getElementById('staten');
+
+         disclosure.addEventListener("focus", (event) => {
+           document.getElementById("disclaimer").style.display = "block";
+         });
+
+         disclosure.addEventListener("blur", (event) => {
+           document.getElementById("disclaimer").style.display = "none";
+         });
+                   
+
+       
+      </script>
+   </body>
+</html>
