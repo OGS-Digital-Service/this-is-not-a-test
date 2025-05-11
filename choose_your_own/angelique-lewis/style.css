@@ -1,0 +1,307 @@
+body{
+    margin: 0px;
+    font-family: "Proxima Nova", sans-serif;
+}
+
+p {
+    text-align: center;
+}
+/* Navbar */
+.navbar ul{
+    list-style-type: none;
+    background-color: #154973;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+.navbar {
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-links li{
+    display: flex;
+    align-items: center;
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+
+.navbar a:hover{
+    background-color: #242424;
+}
+
+.navbar li{
+    float: left;
+    position: relative;
+    text-align: center;
+}
+
+/* Hero Image */
+
+.hero-content {
+    position: relative;
+    text-align: left;
+    color: black;
+}
+
+.hero-content img {
+     width: 100%;
+     max-height: 400px;
+     object-fit: cover;
+}
+
+.picture-overlay-text {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    padding: 1%;
+    background-color: rgba(245, 245, 245, 0.849);
+}
+
+.logo {
+    display: flex;
+}
+
+/* Orange Quote Block */
+.quote{
+    background-color: #d4820c;
+    color: black;
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Containers */
+.container {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    gap: 2rem;
+    background-color: white;
+    flex-wrap: wrap;
+}
+
+.large-cards {
+    display: flex;
+    flex: 1 1 45%;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    background: #EFF6FB;
+    color: black;
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    border-style: solid;
+    justify-content: center;
+}
+
+.large-cards p {
+    padding: 1rem;
+    border-radius: 10px;
+    color: #333; 
+    text-align: center;
+}
+
+/*Helpful Links*/
+
+*{
+    box-sizing: border-box; 
+}
+.container-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 20px auto;
+    max-width: 1200px;
+    padding: 1rem;
+    background-color: white;
+}
+
+.card-links {
+    flex: 1 1 30%;
+    background: #154973;
+    flex-wrap: wrap;
+    color: yellow;
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 250px;
+}
+
+.card-links h3 {
+    background-color: black;
+    padding: 10px;
+    margin: -20px -20px 15px -20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 25px;
+}
+
+.card-links a {
+    text-decoration: none;
+    color: white;
+    padding: 0;
+    letter-spacing: normal;
+    display: block;
+}
+
+.card-links a:hover {
+    text-decoration: underline;
+}
+
+.card-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.card-links li{
+    padding-bottom: 12px;
+}
+
+.helpful{
+    text-align: center;
+
+}
+/*collaboration section*/
+.collab {
+    display: flex;
+    justify-content: center;
+    padding-right: 10px;
+    background-color: #0f5fa1b6;
+    color: white;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+
+.collab h1 {
+    text-align: center;
+    padding: 1rem;
+    font-size: 42px;
+}
+
+
+/*buttons */
+
+.btn-1 {
+    font-size: 15px; 
+    border-radius: 4px;
+    color: white;
+    background-color: #457AA5;
+    position: relative;
+}
+
+.btn-2 {
+    font-size: 15px; 
+    border-radius: 4px;
+    color: white;
+    background-color: #457AA5;
+    position: relative;
+}
+
+/*socials*/
+.socials {
+    text-align: center;
+    padding-bottom: 10px;
+    background-color: whitesmoke;
+}
+
+/*Survey Section Getting user feedback in real time*/
+.surveys-section {
+    border-bottom: 10px;
+    border-top: 10px;
+    background-color: #d4820c;
+    color: black;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+/* Mobile Phone Responsive */
+
+@media (max-width: 768px) {
+
+    .navbar li {
+        float: none;
+        width: 100%
+    }
+
+    .large-cards .card {
+       flex: 1 1 100%;
+    }
+
+    .collab h1 {
+        font-size: 30px;
+    }
+
+    .picture-overlay-text {
+        position: static;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .card-links{
+        flex: 1 1 45%;
+    }
+    .large-cards .card {
+        flex: 1 1 100%;
+    }
+
+    .collab {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+
+   .hero-content img{
+    max-height: 300px;
+   }
+}
+
+@media (max-width: 1280px) {
+    .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .card-links {
+        flex: 1 1 30%;
+    }
+
+    .large-cards {
+        flex: 1 1 45%;
+    }
+}
+
+/*Root colors for reference */
+
+:root {
+    --primary-core-blue: #154973;
+    --secondary-core-blue: #457AA5;
+    --link-blue: #004DD1;
+    --tertiary-core-blue: #EFF6FB;
+    --quaternary-blue: #007AC2;
+    --core-accent-yellow: #FACE00;
+    --yellow-alert: #FFE396;
+    --black: #000000;
+    --darkest-gray: #242424;
+    --dark-gray: #62666A;
+    --mid-gray: #D0D0CE;
+    --light-gray: #EDEDED;
+    --white: #FFFFFF;
+    --dark-red-alert: #B32E31;
+    --light-red-alert: #FEC3C3;
+    --success-green: #329d08;
+    --warning-orange: #d4820c;
+  }

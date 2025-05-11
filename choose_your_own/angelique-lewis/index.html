@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New York</title>
+</head>
+<body>
+    <div class="hero">
+    <nav class="navbar">
+        <ul class="nav-links" id="navLinks">
+            <div class="logo">
+            <img src="images/NYlogo.png" alt="New York State logo" width="95" length="80">
+            <li><a href="#Government">Government</a></li>
+            <li><a href="#News">News</a></li>
+            <li><a href="#Services">Online Services</a></li>
+            <li><a href="#Residents">Residents</a></li>
+            <li><a href="#Helpful">Helpful Links</a></li>
+        </ul>
+    </div>
+    </nav>
+    </div>
+    <main>  
+        <section class="hero-content">
+        <!--Hero image-->
+        <img src="images/nyc.jpg" alt="Skyline of New York" width="5">
+        <div class="picture-overlay-text">
+            <h1>Search NewYork.gov</h1>
+            <!--Search Box-->
+            <input placeholder="Type here to search🔎..." class="search-box"><button>Search</button><h2>Popular Search Terms: 
+                <a href="dmv">DMV,</a>
+                <a href="healthrecords">Health Records,</a>
+                <a href="taxes">Taxes,</a>
+                <a href="business">Business</a></h2>
+            </input>
+        </div>
+        </section>
+        <!--Break for Quote-->
+        <section class="quote"><h1>"A Better & Bold New York"</h1></section>
+        <!--container cards for trending news-->
+        <div class="container">
+            <div class="large-cards">
+                <!--Left Box-->
+                <h3>"Don't Wait, Get your Real ID"</h3>
+                <p>All New Yorker's will require a real ID for <strong>All Domestic Travel</strong> after May 7th 2025. Apply now at your local DMV.
+                    <br />Don't get turned around at the airport for non-compliance. 
+                    When traveling domestic you will be required to show a Real ID or your passport. </p>
+                <button class="btn-1" type="button">Learn More</button>
+                </div> 
+                    <!--Right Box-->
+            <div class="large-cards">
+                    <h3>NY Knicks Beat Celtics!</h3>
+                <p>With a few minutes on the buzzer during a tight game with the Knicks vs. Boston Celtics, the Knicks steal the win by one point!
+                    <br />Could this be our come back season? Are you tuning in for the next game?</p>
+                <button class="btn-2" type="button">Learn More</button>
+            </div>
+        </div>
+        </div>
+        <!--Collaboration Section-->
+        <section class="collab">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam.
+            Quam et neque in cumque? Quis mollitia quia nam.
+            Explicabo magnam eos officiis alias quae earum ea ad.
+            Ipsa consequuntur harum ratione laudantium error distinctio atque molestiae.
+            Vero quod ipsam aperiam placeat odio ipsum, repudiandae voluptatibus!
+            Rerum cum temporibus, eaque explicabo nam eos ex reprehenderit.
+            Quia itaque provident cupiditate amet tempore, explicabo porro ab?
+            Sequi, aperiam porro consequuntur beatae magni dicta quia perspiciatis.</p>
+            <img src="images/collab.jpg" alt="Group of people collaborating in an office"  width="500">
+        </section>
+        <h1 class="helpful">Helpful Links</h1>
+        <div class="container-links">
+            <div class="card-links">
+            <h3>Residents</h3>
+            <ul>
+                <li><a href="DL">Driver Information</a></li>
+                <li><a href="food">Apply for WIC, Food Assistance</a></li>
+                <li><a href="voting">Register to Vote</a></li>
+            </ul>
+            </div>
+            <div class="card-links">
+            <h3>Business</h3>
+            <ul>
+                <li><a href="online">Online Business Services</a></li>
+                <li><a href="tax">Business Tax Services</a></li>
+                <li><a href="registration">Business Registration and DBA's</a></li>
+            </ul>
+            </div>
+            <div class="card-links">
+            <h3>Recreation</h3>
+            <ul>
+                <li><a href="sports">NY Sports</a></li>
+                <li><a href="parks">NY State Parks</a></li>
+                <li><a href="travel">Travel & Safety</a></li>
+            </ul>
+            </div>
+        </div>
+        <!--Social Media Handles-->
+        <section class="socials" aria-label="Social Media Links">
+            <h1>Lets Connect!</h1>
+            <img src="images/facebook.png" alt="facebook" aria-label="Link to Facebook" width="40">
+            <img src="images/social.png" alt="instagram" aria-label="Link to Instagram" width="40">
+        </section>
+
+        <!--Survey Section, Get User feedback in real time-->
+        <div class="surveys-section">
+        <section id="survey" class="survey-section"><h1>Take Our Survey</h1>
+            <h3>Were you able to complete your task today?</h3>
+        <button onclick="showThankYou('yes')">Yes</button>
+        <button onclick="showThankYou('no')">No</button>
+
+        <!--Message goes below-->
+    <div id="thank-you" class="hidden"></div>
+        </section>
+    </div>
+    </main>
+    <footer><p> &copy; 2025 New York Gov. All rights reserved.</p></footer>
+<script src="main.js"></script>
+</body>
+</html>
