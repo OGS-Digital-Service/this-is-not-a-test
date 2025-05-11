@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>NYS Programs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <script
+      src="https://kit.fontawesome.com/3f93d2c0e4.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+
+    <!-- navigation ----------------------- -->
+<section class="nav--">
+    <div class="nav-container">
+    <span class="nav-border"></span>
+      <div class="logo">
+        <img src="images/nys-logo.png" alt="nys-logo" />
+      </div>
+      <button class="mobile-menu-btn">
+      <i class="fa-solid fa-chevron-down"></i>
+    </button>
+      <nav class="nav">
+        <ul>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Programs</a></li>
+          <li><a href="#">News</a></li>
+         
+          <li><a href="./gov_page/government.html">Government</a></li>
+        </ul>
+      </nav>
+    </div>
+</section>
+
+<!--   hero ----------------------------------- -->
+ <section class="hero--">
+      <video
+        src="images/nys-hero-video.mp4"
+        autoplay
+        muted
+        loop
+        playsinline></video>
+
+        <!-- text overlay ---------------------->
+      <div class="hero-text">
+      <div class="title-main">
+        <div>Programs</div>
+        <p class="subtext">
+          Learn about programs and initiatives around New York State
+        </p>
+
+        <!--  program button ---------------------->
+        <div class="programs-menu">
+          <input type="checkbox"
+            id="programs-dropdown-toggle"
+            class="programs-toggle-checkbox"
+            aria-haspopup="true"
+            role="button" />
+          <label for="programs-dropdown-toggle" class="programs-toggle-label">
+            <button class="programs-button">Select a program <i class="fa-solid fa-chevron-down"></i></button>
+          </label>
+          <div class="programs-links">
+            <!-- program links menu renders here--------------------->
+            
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+<!-- program cards------------------------------->
+    <section class="programs--">
+      <div class="program-grid" id="program-container">
+<!-- program cards renders here js -->
+      </div>
+    </section>
+
+
+    <!--  engagement and footer section -------------------->
+
+   <section class="engagement-container">
+<div class="eng-column">
+  <div class="eng-lg">
+    <img src="images/nys-lg-white.png" alt="nys-logo" />
+    <div class="eng-text">
+      Connect with us and stay informed.
+      <div class="eng-text-2">Download New York state apps and follow New York state agencies.</div>
+      <button class="eng-btn">NYS Apps</button>
+  <button class="eng-btn">NYS Agencies</button>
+  <div class="eng-social">
+    <i class="fa-brands fa-instagram"></i>
+    <i class="fa-brands fa-x-twitter"></i>
+  </div>
+    </div>
+  </div>
+  
+</div>
+   <div class="eng-feedback">
+   <span>Did you find this page helpful?
+   <button class="eng-thumb"><i class="fa-solid fa-thumbs-up">Yes</i></button>
+<button class="eng-thumb"><i class="fa-solid fa-thumbs-down"> No</i></button>
+</span> 
+   </div>
+   </section>
+
+
+   <footer class="footer-container">
+<div class="footer-column-1" id="footer-column-1">
+
+    </div>
+  </footer>
+
+   <script src="programsData.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

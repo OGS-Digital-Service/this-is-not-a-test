@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agencies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script
+      src="https://kit.fontawesome.com/3f93d2c0e4.js"
+      crossorigin="anonymous"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="./gov.css" />
+  </head>
+  <body>
+    <section class="nav--">
+      <div class="nav-container">
+        <span class="nav-border"></span>
+        <div class="logo">
+          <img src="/images/nys-logo.png" alt="nys-logo" />
+        </div>
+        <button class="mobile-menu-btn">
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <nav class="nav">
+          <ul>
+            <li><a href="">Services</a></li>
+            <li><a href="/index.html">Programs</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="government.html">Government</a></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+    <!-- gov hero ------------------------- -->
+ <section class="gov-hero">
+  <div class="gov-text-container">
+    <h1 class="gov-title">New York State Government</h1>
+    <p class="gov-subtext">
+      Get information on the public service roles of the New York State Governor, Comptroller, and Attorney General.
+    </p>
+ <div id="gov-links-container"></div>
+  </div> 
+
+  <div class="gov-image-container">
+    <img 
+      src="./gov_images/nybldg.png" 
+      alt="ny capital bldg" 
+      class="gov-image" />
+  </div>
+</section>
+ <section class="officials" id="gov-off">
+
+  <!------- gov officials cards-------- -->
+    
+  
+    </section>
+
+
+<!-- highlight frame ------------------------>
+<section class="ag-highlight">
+<div class="ag-highlight-content">
+ <small>May 09, 2025</small>
+<h1 class="ag-h-title">$10 Million to Revitalize East Buffalo</h1>
+<p class="ag-h-text">Governor Hochul announces the new $10 million East Side Building Fund for commercial and mixed-use projects to help revitalize neighborhood business districts in East Buffalo.
+East Side Building Fund</p>
+
+  
+  <button class="ag-h-button">learn more</button>
+</div>
+</section>
+
+
+<section class="gov-agencies">
+  <div class="gov-ag-container">
+    <div class="gov-ag-col-1">
+      <div class="gov-ag-text-col-1">
+      <h1 class="gov-ag-title">New York State Agencies</h1>
+      <h3 class="gov-ag-text">
+        New York State has over 100 agencies and authorities that provide a wide range of services to the public. 
+        Each agency has its own website with information about its programs, services, and initiatives.
+      </h3>
+      </div>
+ <div class="agency-menu">
+  <input type="checkbox" id="agency-toggle" class="agency-toggle-checkbox" hidden>
+  <label for="agency-toggle" class="agency-toggle-label">Select an agency <i class="fa-solid fa-chevron-down"></i></label>
+  <div class="agency-links"></div>
+</div>
+      <div>
+        
+      </div>
+    </div>
+    <div class="gov-ag-col-2">
+ <div id="agencies-cards" class="agencies-cards"></div>
+
+          
+          </div>
+      </div>
+
+  </div>
+
+
+</section>
+
+<!-- engagement & footer -------------------------->
+
+    <section>
+      <section class="engagement-container">
+        <div class="eng-column">
+          <div class="eng-lg">
+            <img src="../images/nys-lg-white.png" alt="nys-logo" />
+            <div class="eng-text">
+              Connect with us and stay informed.
+              <div class="eng-text-2">
+                Download New York state apps and follow New York state agencies.
+              </div>
+              <button class="eng-btn">NYS Apps</button>
+              <button class="eng-btn">NYS Agencies</button>
+              <div class="eng-social">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-x-twitter"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="eng-feedback">
+          <span
+            >Did you find this page helpful?
+            <button class="eng-thumb">
+              <i class="fa-solid fa-thumbs-up">Yes</i>
+            </button>
+            <button class="eng-thumb">
+              <i class="fa-solid fa-thumbs-down"> No</i>
+            </button>
+          </span>
+        </div>
+      </section>
+
+      <footer class="footer-container">
+        <div class="footer-column-1" id="footer-column-1"></div>
+      </footer>
+    </section>
+    <script src="gov.js"></script>
+    <script src="govData.js"></script>
+    <script src="/script.js"></script>
+  </body>
+</html>
