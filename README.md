@@ -9,21 +9,14 @@ Thank you for applying to work for the New York State Digital Service! This is n
 - If you do need to use AI for some reason, please indicate exactly which services/models you used and for what specific purpose. 
 - This is a best effort exercise: we do not expect perfection, nor will we be critiquing every little detail.
 - There are many, many, many correct ways to do these things. Please be creative and be ready to explain your methods.
-- This repo is contained within an Official New York State GitHub organization, is open to the public, and is public domain. 
-- Do not submit PRs that contain: private keys, environment variables, proprietary information or code, copyrighted material, or anything you wouldn't want the entire internet to be able to have access to, as these will be rejected. 
 
 ## Process
-- For your submissions please fork this repo, create a branch with your name, and then submit a PR to merge your repo into the branch for the job you are applying for (either accessibility-solutions or web-solutions branches).
-- 
+- Please read the SCENARIO.md in the folder for your particular job (Navigator, or Navigator Manager)
+- Direct Link to each of the exercise scenarios
+    - [Accessibility Navigator Manager]()
+    - [Accessibility Navigator]()
+- Send your submissions to Digital.Services@ogs.ny.gov or jeffrey.knaack@digital.ny.gov by Monday, July 27.
 
-## Exercises
-Accessibility Solutions has two exercises and web solutions has a choice, with two options.
-
-### Exercises to for Accessibility Solutions (BOTH):
-1. Accessibility audit of the homepage of any New York State website, using WCAG 2.2 AA as your guideline.
-2. Create and discuss an accessible code pattern
-
-### Exercises to Choose from for Web Solutions (Choose 1):
-1. Build a few components from a NYS website with entirely your own code
-OR
-2. Choose your own adventure code demo of your choice
+## Disclaimers
+- This repo is contained within an Official New York State GitHub organization, is open to the public, and is public domain. 
+- Do not submit PRs that contain: private keys, environment variables, proprietary information or code, copyrighted material, or anything you wouldn't want the entire internet to be able to have access to, as these will be rejected. 
