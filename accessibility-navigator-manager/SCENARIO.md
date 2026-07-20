@@ -11,6 +11,11 @@ The **NYS Example Agency** needs to assess accessibility status across **10–15
 
 ---
 
+## Keep in mind!
+Digital accessibility is first and always for the benefit of real people. What we're trying to do here is promote equal access to information, resources, services and benefits. Throughout this exercise - and your career in accessibility - remember to consult and keep in focus the lived experiences of real disabled users. 
+
+---
+
 ## Exercise Breakdown
 
 ### Task 1: Baseline Audit and Evaluation Strategy
@@ -18,7 +23,7 @@ The **NYS Example Agency** needs to assess accessibility status across **10–15
 
 #### Requirements:
 - **Tools & Methods:**
-  - List tools you would use (e.g., axe DevTools, WAVE, Lighthouse).
+  - List tools you would use (e.g., axe DevTools, WAVE, Lighthouse, Screen Readers, Platforms, Devices, etc.).
   - Explain how you would automate or semi-automate the process.
   - Indicate where in the process manual review would be feasible and how much time it would take and/or the approach to handling this.
 
@@ -54,9 +59,9 @@ The **NYS Example Agency** needs to assess accessibility status across **10–15
     - Or any large Federal Government Agency / Foreign Government Service (GOV.uk etc)
 - Don't use NY.gov or Governor.ny.gov as examples: we're not agencies! 
 - A PowerPoint is fine as a presentational tool, but keep in mind that **presentations are not products**. The report card and the data must be public and shareable in easy to access digital formats (hint: a webpage!). You don't have to build the website, but describe what it would contain. 
-- Need help? Consult one of the many excellent accessibility experts out there on the internet who have done so much good work to highlight was is most impactful in accessibility. We follow:
+- Need help? Consult one of the many excellent accessibility experts out there on the internet who have done so much good work to highlight what is most impactful in accessibility. We follow:
     - [A11y Project](https://www.a11yproject.com)
     - [Eric Eggert](https://yatil.net)
     - [Sara Soueidan](https://www.sarasoueidan.com)
     - [Scott O'Hara](https://www.scottohara.me)
-    - [GitHub Open Accessibility Guide](https://opensource.guide/accessibility-best-practices-for-your-project/)
+    - [GitHub Open Accessibility Guide](https://opensource.guide/accessibility-best-practices-for-your-project/)    

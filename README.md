@@ -13,7 +13,7 @@ Thank you for applying to work for the New York State Digital Service! This is n
 ## Process
 - Please read the SCENARIO.md in the folder for your particular job (Navigator, or Navigator Manager)
 - Direct Link to each of the exercise scenarios
-    - [Accessibility Navigator Manager]()
+    - [Accessibility Navigator Manager](https://github.com/OGS-Digital-Service/this-is-not-a-test/blob/accessibility-navigators/accessibility-navigator-manager/SCENARIO.md)
     - [Accessibility Navigator]()
 - Send your submissions to Digital.Services@ogs.ny.gov or jeffrey.knaack@digital.ny.gov by Monday, July 27.
 
