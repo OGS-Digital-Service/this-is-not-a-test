@@ -17,6 +17,10 @@ Thank you for applying to work for the New York State Digital Service! This is n
     - [Accessibility Navigator](https://github.com/OGS-Digital-Service/this-is-not-a-test/blob/accessibility-navigators/accessibility-navigator/SCENARIO.md)
 - Send your submissions to Digital.Services@ogs.ny.gov or jeffrey.knaack@digital.ny.gov by Monday, July 27.
 
+## Use of AI
+- we’re not opposed to using AI as a helper/consultant/idea validator: remember this exercise is to validate your skills and abilities. 
+- If you do use AI or AI tools: please submit a small statement that details how they were used, what they were used for, and which services or models.
+
 ## Disclaimers
 - This repo is contained within an Official New York State GitHub organization, is open to the public, and is public domain. 
 - Do not submit PRs that contain: private keys, environment variables, proprietary information or code, copyrighted material, or anything you wouldn't want the entire internet to be able to have access to, as these will be rejected. 
