@@ -1,31 +1,22 @@
 # this-is-not-a-test 
-For job exercise submissions. Don't panic!
+For job exercise instructions. Don't panic!
 
 ## Hello World!
-Thank you for applying to work for the New York State Digital Service! This is the repository where you will submit your candidate evaluation exercise responses. 
+Thank you for applying to work for the New York State Digital Service! This is not a test: it's a way for you to demonstrate YOUR unique abilities and perspective. 
 
 ## Rules & Guidelines
-- Please do not use AI, Copilot, ChatGPT or any other AI adjacent helpers. Why? This exercise is to evaluate YOUR abilities, not your ability to use AI to assist. 
-- This is a best effort exercise: we do not expect perfection, nor will we be critiquing every line of code or approach.
+- This exericise is primarily a way for candidates to show how they think and approach a problem. We're not looking for an exact answer.
+- If you do need to use AI for some reason, please indicate exactly which services/models you used and for what specific purpose. 
+- This is a best effort exercise: we do not expect perfection, nor will we be critiquing every little detail.
 - There are many, many, many correct ways to do these things. Please be creative and be ready to explain your methods.
-- This repo is contained within an Official New York State GitHub organization, is open to the public, and is public domain. 
-- Do not submit PRs that contain: private keys, environment variables, proprietary information or code, copyrighted material, or anything you wouldn't want the entire internet to be able to have access to, as these will be rejected. 
 
 ## Process
-- For your submissions please fork this repo, create a branch with your name, and then submit a PR to merge your repo into the branch for the job you are applying for (either accessibility-solutions or web-solutions branches).
-- Please organize your code into the folders provided for the exercises and into a top level folder with your name.
-- Example PR structure: candidate-name --> merge into --> accessibility-solutions (or web-solutions)
-- Example contents: accessibility_audit/candidate-name/(things you did here!)
-- For simple text, please use markdown or html, try not to submit pdfs or word documents unless absolutely necessary
+- Please read the SCENARIO.md in the folder for your particular job (Navigator, or Navigator Manager)
+- Direct Link to each of the exercise scenarios
+    - [Accessibility Navigator Manager](https://github.com/OGS-Digital-Service/this-is-not-a-test/blob/accessibility-navigators/accessibility-navigator-manager/SCENARIO.md)
+    - [Accessibility Navigator](https://github.com/OGS-Digital-Service/this-is-not-a-test/blob/accessibility-navigators/accessibility-navigator/SCENARIO.md)
+- Send your submissions to Digital.Services@ogs.ny.gov or jeffrey.knaack@digital.ny.gov by Monday, July 27.
 
-## Exercises
-Accessibility Solutions has two exercises and web solutions has a choice, with two options.
-
-### Exercises to for Accessibility Solutions (BOTH):
-1. Accessibility audit of the homepage of any New York State website, using WCAG 2.2 AA as your guideline.
-2. Create and discuss an accessible code pattern
-
-### Exercises to Choose from for Web Solutions (Choose 1):
-1. Build a few components from a NYS website with entirely your own code
-OR
-2. Choose your own adventure code demo of your choice
+## Disclaimers
+- This repo is contained within an Official New York State GitHub organization, is open to the public, and is public domain. 
+- Do not submit PRs that contain: private keys, environment variables, proprietary information or code, copyrighted material, or anything you wouldn't want the entire internet to be able to have access to, as these will be rejected. 
