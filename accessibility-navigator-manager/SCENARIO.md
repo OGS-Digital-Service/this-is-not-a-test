@@ -53,6 +53,7 @@ Digital accessibility is first and always for the benefit of real people. What w
   - Explain how you would approach reporting this information to the target audiences (presentation, documents, digital report cards, data visualizations, etc.).
   - Define thresholds for categorizing issues (e.g., critical vs. minor).
 
+---
 
 ### Cheat Codes
 - If "Example Agency" is too vague - use a real NYS agency that has a large footprint like NYS Department of Health, Department of Labor, or Office of General Services. 

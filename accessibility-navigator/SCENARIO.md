@@ -48,6 +48,7 @@ Digital accessibility is first and always for the benefit of real people. What w
 - **Reporting Tools:**
   - Explain how you would approach reporting this information to the target audiences (presentation, documents, digital report cards, data visualizations, etc.).
 
+---
 
 ### Cheat Codes
 - If "Example Agency" is too vague - use a real NYS agency that has a large footprint like NYS Department of Health, Department of Labor, or Office of General Services. 
